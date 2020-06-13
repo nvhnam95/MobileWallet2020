@@ -17,6 +17,7 @@ def background_schedule_service():
 
 def update_interest():
     saving_accounts = SavingAccount.objects.all()
+
     # This was not optimized
     for saving_account in saving_accounts:
         account_age = timezone.now() - saving_account.created_time
