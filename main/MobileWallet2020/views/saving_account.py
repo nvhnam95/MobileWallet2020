@@ -39,3 +39,12 @@ class SavingAccountViewSet(ModelViewSet, LoggingMixin):
     def get_queryset(self):
         customer = self.request.user
         return SavingAccount.objects.filter(customer=customer)
+
+    def destroy(self, request, *args, **kwargs):
+        pk = kwargs.get('pk')
+        customer = request.user
+        saving_account = self.get_queryset().get(pk=pk)
+        customer.balance += saving_account.balance
+        customer.balance += saving_account.interest
+        customer.save()
+        return super().destroy(request, *args, **kwargs)
