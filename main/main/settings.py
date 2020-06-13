@@ -2,6 +2,7 @@ import os
 
 DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(BASE_DIR)
 SECRET_KEY = 'ymb)6s0gia%v#1v%c0w(3nkal%ttx94*mifs$y7r#f)q^-^$yw'
 
 ALLOWED_HOSTS = ['*']
@@ -38,10 +39,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'main.urls'
 
+WEB_DIR = os.path.join(BASE_DIR, 'static')
+
+# STATICFILES_DIRSS = [
+#     os.path.join(WEB_DIR, 'js'),
+# ]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [WEB_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,7 +95,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
+STATIC_URL = '/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 AUTH_USER_MODEL = 'MobileWallet2020.Customer'
 
