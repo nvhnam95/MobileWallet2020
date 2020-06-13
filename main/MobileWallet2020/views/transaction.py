@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
 from MobileWallet2020.models import Transaction, Customer
-from MobileWallet2020.services import transaction_service
+from MobileWallet2020.services import funding_service
 
 
 class TransactionSerializer(serializers.ModelSerializer):
@@ -26,7 +26,7 @@ class TransactionSerializer(serializers.ModelSerializer):
         amount = validated_data['amount']
 
         transaction = super(TransactionSerializer, self).create(validated_data)
-        transaction_service.make_transfer(sender, receiver, amount)
+        funding_service.make_transfer(sender, receiver, amount)
 
         return transaction
 
@@ -51,4 +51,4 @@ class TransactionViewSet(ModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
-        return Transaction.objects.filter(Q(sender=user) | Q(receiver=user))
+        return Transaction.objects.filter(Q(sender=user) | Q(receiver=user)).order_by('-created_time')
