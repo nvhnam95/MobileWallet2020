@@ -54,7 +54,7 @@ Using the webapp:
 + After login, customer can see their balance, saving accout information, transaction history...
 + Click on Deposit, then deposit an amount of money.
 + Click on tranfer money to tranfer money to another user.
-+ Click on "Create a new one?" to create a new saving account, choose every_minute to let the interest raise faster.
-+ Click on "Delete some" to delete a saving account, the money on that account and interst will be added to main balance.
++ Click on "Create a new saving account?" to create a new saving account, choose every_minute to let the interest raise faster.
++ Click on "Delete a saving account and get the interest." to delete a saving account, the money on that account and interst will be added to main balance.
 + Refresh page will log the user out.
  
