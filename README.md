@@ -10,8 +10,8 @@ Application that allow user:
 Additional feature:
 - Simulate deposit to account.
 - Create, delete saving account.
-- On saving account, use periodically get the interest base on saving type.
-- When customer close the saving account, the original balance and the interest will add into main account. (Haven't had on webapp).
+- On saving account, user periodically gets the interest base on saving type.
+- When customer closes the saving account, the original balance and the interest will add into main account.
 
 API documentation:
 https://documenter.getpostman.com/view/5409175/SzzhddtL
