@@ -1,7 +1,7 @@
 # MobileWallet2020
 Thunes's test.
 
-Overview:
+<b>Overview</b>:
 Application that allow user:
 - Create account, login.
 - Get the account information. (username, balance...)
