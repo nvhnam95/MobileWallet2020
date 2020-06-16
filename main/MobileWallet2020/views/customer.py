@@ -4,7 +4,6 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
-from rest_framework_tracking.mixins import LoggingMixin
 
 from MobileWallet2020.models import Customer
 
@@ -33,7 +32,7 @@ class CustomerSerializer(serializers.ModelSerializer):
         return value
 
 
-class CustomerViewSet(ModelViewSet, LoggingMixin):
+class CustomerViewSet(ModelViewSet):
     serializer_class = CustomerSerializer
     authentication_classes = []
 
