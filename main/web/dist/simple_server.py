@@ -4,6 +4,6 @@ import socketserver
 PORT = 80
 Handler = http.server.SimpleHTTPRequestHandler
 
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("serving at port %s" % PORT)
-    httpd.serve_forever()
+httpd = socketserver.TCPServer(("", PORT), Handler)
+print("Serving at port %s" % PORT)
+httpd.serve_forever()
