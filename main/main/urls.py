@@ -13,9 +13,9 @@ from MobileWallet2020.vue_support import index
 
 router = routers.SimpleRouter(trailing_slash=False)
 
-router.register('customers', CustomerViewSet, base_name='customer')
-router.register('transactions', TransactionViewSet, base_name='transaction')
-router.register('saving-accounts', SavingAccountViewSet, base_name='saving-account')
+router.register('customers', CustomerViewSet, basename='customer')
+router.register('transactions', TransactionViewSet, basename='transaction')
+router.register('saving-accounts', SavingAccountViewSet, basename='saving-account')
 
 v1_api = [
     path('auth-tokens', views.obtain_auth_token),
