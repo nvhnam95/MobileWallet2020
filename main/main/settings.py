@@ -75,7 +75,7 @@ USE_TZ = True
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'web/dist/')],
+        'DIRS': [os.path.join(BASE_DIR, 'MobileWallet2020/static/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
