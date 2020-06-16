@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 
 from MobileWallet2020.services.schedule_service import background_schedule_service
 from MobileWallet2020.views.customer import CustomerViewSet
+from MobileWallet2020.views.index_view import index_view
 from MobileWallet2020.views.saving_account import SavingAccountViewSet
 from MobileWallet2020.views.transaction import TransactionViewSet
 
@@ -18,13 +19,13 @@ router.register('saving-accounts', SavingAccountViewSet, basename='saving-accoun
 
 v1_api = [
     path('auth-tokens', views.obtain_auth_token),
-    path('', include(router.urls))
-
+    path('', include(router.urls)),
 ]
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('api/v1/', include(v1_api)),
+                  path('', index_view)
 
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
