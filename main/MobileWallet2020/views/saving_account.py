@@ -28,6 +28,11 @@ class SavingAccountSerializer(serializers.ModelSerializer):
         if customer.balance < balance:
             msg = "Error: insufficient balance."
             raise exceptions.ValidationError(msg)
+
+        if balance <= 0:
+            msg = "Error: balance need to be a positive number."
+            raise exceptions.ValidationError(msg)
+
         return balance
 
 

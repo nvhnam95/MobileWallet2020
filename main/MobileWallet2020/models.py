@@ -7,6 +7,7 @@ from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 
 from MobileWallet2020.constants import MIN_TRANSFER_AMOUNT
+from django.contrib import admin
 
 
 class Customer(AbstractUser):
@@ -45,9 +46,6 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
-
-
-from django.contrib import admin
 
 admin.site.register(Customer)
 admin.site.register(Transaction)

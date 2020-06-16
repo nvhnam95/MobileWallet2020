@@ -42,6 +42,11 @@ class TransactionSerializer(serializers.ModelSerializer):
         if customer.balance < amount:
             msg = "Error: insufficient balance."
             raise exceptions.ValidationError(msg)
+
+        if amount <= 0:
+            msg = "Error: amount need to be a positive number."
+            raise exceptions.ValidationError(msg)
+
         return amount
 
 
