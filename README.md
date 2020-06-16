@@ -1,26 +1,26 @@
 # MobileWallet2020
 Thunes's test.
 
-<b>Overview</b>:
+__Overview__
 Application that allow user:
-- Create account, login.
-- Get the account information. (username, balance...)
-- Send money to another account.
-
-Additional feature:
-- Simulate deposit to account.
-- Create, delete saving account.
-- On saving account, user periodically gets the interest base on saving type.
-- When customer closes the saving account, the original balance and the interest will add into main account.
+- User access the service through an HTTP based API, with authentication
+- Create account, login into system.
+- Get the account's information. (username, balance...)
+- Send money to other accounts.
+- View the transaction history.
+- Admin user can view, edit, delete created resources.
+- Data are store on SQLite database for mobility.
+- There are another feature that would interest the user: saving money:
+-- Simulate deposit money to account.
+-- Create a saving account.
+-- On saving account, user periodically gets the interest base on saving type.
+-- When customer closes the saving account, the original balance and the interest will be added into main account.
 
 API documentation:
 https://documenter.getpostman.com/view/5409175/SzzhddtL
-
 ---------------
-
 Running the application:
-
-- Prequisite: python >= 3.5.
+- Prequisite: python >= 3.5
 + Clone the source code.
 + cd to MobileWallet2020/main
 + Install python dependencies: pip install -r requirements.txt
@@ -28,23 +28,22 @@ Running the application:
 python manage.py makemigrations MobileWallet2020
 python manage.py migrate
 
++ Run tests:
++ python manage.py test
++ 
 + Create admin user:
 python manage.py createsuperuser
 
-+ Run the server on port 80:
++ Run the server on port 80 (orther ports are just fine):
 python manage.py runserver 0.0.0.0:80
-
-+ Run web app to test the APIs:
-cd to: MobileWallet2020\main\web\dist
-Run: python simple_serve.py
-
-+ Open browser, navigate to localhost:8080
++ Open browser, navigate to localhost
 
 ---------------
 Using the admin page:
 + Navigate to: localhost/admin
 + Login with the credentials created above.
 + From the admin site, admin user can audit the data and the usage of services.
+--------------
 
 Using the webapp:
 + Browse localhost:8080
