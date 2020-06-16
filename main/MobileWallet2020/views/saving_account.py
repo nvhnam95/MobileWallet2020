@@ -23,12 +23,12 @@ class SavingAccountSerializer(serializers.ModelSerializer):
 
         return super().create(validated_data)
 
-    def validate_amount(self, amount):
+    def validate_balance(self, balance):
         customer = self.context.get('request').user
-        if customer.balance < amount:
+        if customer.balance < balance:
             msg = "Error: insufficient balance."
             raise exceptions.ValidationError(msg)
-        return amount
+        return balance
 
 
 class SavingAccountViewSet(ModelViewSet):

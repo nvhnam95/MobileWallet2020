@@ -90,8 +90,6 @@ TEMPLATES = [
 
 STATIC_URL = '/web/files/'
 
-STATIC_ROOT = '/MobileWallet2020/web/dist/'
-
 AUTH_USER_MODEL = 'MobileWallet2020.Customer'
 
 REST_FRAMEWORK = {
