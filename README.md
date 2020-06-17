@@ -2,19 +2,19 @@
 Thunes's test.
 
 __Overview__
-Application that allow user:
-- User access the service through an HTTP based API, with authentication
-- Create account, login into system.
-- Get the account's information. (username, balance...)
-- Send money to other accounts.
-- View the transaction history.
+Application that alows user:
+- Accesses the service through an HTTP based API, with authentication.
+- Creates account, login into system.
+- Gets the account's information. (username, balance...)
+- Sends money to other accounts.
+- Views the transaction history.
 - Admin user can view, edit, delete created resources.
 - Data are store on SQLite database for mobility.
-- There are another feature that would interest the user: saving money:
--- Simulate deposit money to account.
--- Create a saving account.
--- On saving account, user periodically gets the interest base on saving type.
--- When customer closes the saving account, the original balance and the interest will be added into main account.
+- There are another feature that would interest the user: saving money:     <br>
+-- Simulate deposit money to account.    <br>
+-- Create a saving account.    <br>
+-- On saving account, user periodically gets the interest base on saving type.    <br>
+-- When customer closes the saving account, the original balance and the interest will be added into main account.    <br>
 
 API documentation:
 https://documenter.getpostman.com/view/5409175/SzzhddtL
@@ -46,7 +46,7 @@ Using the admin page:
 --------------
 
 Using the webapp:
-+ Browse localhost:8080
++ Browse localhost
 + Click on Register, enter username and password.
 + Click on register again to create another user.
 + Login with the first user.
