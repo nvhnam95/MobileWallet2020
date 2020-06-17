@@ -24,8 +24,8 @@ Running the application:
 + Clone the source code.
 + cd to MobileWallet2020/main
 + Install python dependencies: pip install -r requirements.txt
-+ Migrate the database: 
-python manage.py makemigrations MobileWallet2020
++ Migrate the database:        <br>
+python manage.py makemigrations MobileWallet2020        <br>
 python manage.py migrate
 
 + Run tests:
@@ -58,8 +58,8 @@ Using the webapp:
 + Refresh page will log the user out.
  
 ---------------
-Running with docker:
-docker build -t mobilewallet .
+Running with docker:     <br>
+docker build -t mobilewallet .      <br>
 docker run -it -p 80:8080 --name=my_container mobilewallet python main/manage.py runserver 0.0.0.0:8080
 
 To remove container, run:
