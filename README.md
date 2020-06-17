@@ -57,3 +57,10 @@ Using the webapp:
 + Click on "Delete a saving account and get the interest." to delete a saving account, the money on that account and interst will be added to main balance.
 + Refresh page will log the user out.
  
+---------------
+Running with docker:
+docker build -t mobilewallet .
+docker run -it -p 80:8080 --name=my_container mobilewallet python main/manage.py runserver 0.0.0.0:8080
+
+To remove container, run:
+docker container rm my_container
