@@ -28,9 +28,9 @@ Running the application:
 python manage.py makemigrations MobileWallet2020        <br>
 python manage.py migrate
 
-+ Run tests:
-+ python manage.py test
-+ 
++ Run tests:    <br>
+python manage.py test  
+
 + Create admin user:
 python manage.py createsuperuser
 
